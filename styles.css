@@ -1,15 +1,23 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: rgb(247, 239, 239);
     height: 100vh;
 }
-#grid-container{
+#grid{
     display: grid;
     grid-template-columns: repeat(16, 31.25px);
     grid-template-rows: repeat(16,31.25px);
-    width: 500px;
     height: 500px;
+    width: 500px;
+    padding: 0;
+    justify-content: center;  
+    border: 2px solid black;
+    
+}
+#grid-container{
+    display: flex;
+    justify-content: center;
 }
 .square{
     background-color: white;
@@ -18,5 +26,24 @@ body{
 button {
     margin: 20px;
     padding: 20px;
-    background-color: red;
+    background-color:black;
+    border: 2px solid pink;
+    border-radius: 100px;
+    color: red;
+}
+
+.black {
+    background-color: black;
+}
+
+#title{
+    color: red;
+    font-family: 'Lobster Two', cursive;
+    font-size: 100px;
+}
+
+#signature{
+    color:green;
+    font-family: 'Lobster Two', cursive;
+    font-size: 30px;
 }
