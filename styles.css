@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+}
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(16, 20px);
+    grid-template-rows: repeat(16,20px);
+}
+.grid{
+    background-color: white;
+}
+
