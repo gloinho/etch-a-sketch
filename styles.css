@@ -1,8 +1,9 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(247, 239, 239);
+    background-color: rgb(209, 209, 209);
     height: 100vh;
+    font-family: 'Lobster Two', cursive;
 }
 #grid{
     display: grid;
@@ -12,40 +13,64 @@ body{
     width: 450px;
     padding: 0;
     justify-content: center;  
-    border: 10px solid red;
-    border-bottom: 50px solid red;
-    
+    border: 2px solid black;
 }
 #grid-container{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    gap: 30px;
 }
 .square{
     background-color: white;
 }
 
 button {
-    margin: 20px;
-    padding: 20px;
-    background-color:black;
-    border: 2px solid pink;
-    border-radius: 100px;
-    color: red;
+    margin: 10px;
+    padding: 10px;
+    background-color:transparent;
+    border: 2px solid black;
+    border-radius: 10px;
     cursor: pointer;
-}
-
-.black {
-    background-color: black;
-}
-
-#title{
-    color: red;
     font-family: 'Lobster Two', cursive;
+    font-size: 20px;
+}
+#rainbow{
+    -webkit-box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 0px 0px 19px 0px rgba(0,0,0,0); 
+    box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 0px 0px 19px 0px rgba(0,0,0,0);
+}
+#black{
+    box-shadow: 7px -5px 10px 0px black;
+}
+#header{
+    margin: 20px;
+}
+#title{
     font-size: 100px;
 }
-
 #signature{
-    color:green;
-    font-family: 'Lobster Two', cursive;
     font-size: 30px;
+}
+
+#buttons{
+    display: flex;
+    height: max-content;
+    flex-direction: column;
+}
+
+#stuff{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#inputsize{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label{
+    font-size: 20px;
+    margin-bottom: 10px;
 }

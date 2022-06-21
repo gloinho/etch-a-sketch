@@ -1,10 +1,16 @@
 // Calculating square size without changing the amount of pixels of de div (grid-container (500x500))
 function squareSize(size){
-    if(size>=100) return alert('Only values lower than 100!!!');
     let sqsize = 450/size;
     return sqsize;
 };
+
+function currentMode(mode){
+    const currentmode = document.getElementById('currentmode')
+    currentmode.textContent = mode
+};
+
 function firstDivs(){
+    currentMode('No mode selected!')
     const grid = document.querySelector('#grid')
     const gridsize = changeGrid()
     for (i=1; i<=gridsize**2; i++){
@@ -15,7 +21,9 @@ function firstDivs(){
     const newsqsize = squareSize(gridsize)
     grid.style.gridTemplateColumns = `repeat(${gridsize}, ${newsqsize}px)`;
     grid.style.gridTemplateRows = `repeat(${gridsize}, ${newsqsize}px)`;
-}
+    const blackdiv = document.querySelectorAll('.square');
+    blackdiv.forEach(div => div.addEventListener('mouseover', () => {div.style.background = 'black'}));
+};
 
 let body = document.getElementById('body')
 body.addEventListener('load', firstDivs(), {once:true})
@@ -30,13 +38,9 @@ function randomColor(){
 
 const buttonrainbow = document.getElementById('rainbow')
 buttonrainbow.addEventListener('click', () => {
-    cleardraw()
-    let sizeinput = changeGrid()
-    let newsqsize = squareSize(sizeinput);
-    const gridcontainer = document.getElementById('grid');
-    gridcontainer.style.gridTemplateColumns = `repeat(${sizeinput}, ${newsqsize}px)`;
-    gridcontainer.style.gridTemplateRows = `repeat(${sizeinput}, ${newsqsize}px)`;
-
+    clearDraw()
+    changeGrid()
+    currentMode('Rainbow mode selected!')
     let divs = document.querySelectorAll('.square');
     divs.forEach(div => div.addEventListener('mouseover', () => {
         div.style.background= randomColor()}, {once:true}))
@@ -53,55 +57,55 @@ buttonrainbow.addEventListener('click', () => {
         }
         div.style.background = newbd
     }))
- })
-
-//Page UI
-let title = document.getElementById('title')
-title.textContent = 'Etch-A-Sketch'
-let signature = document.getElementById('signature')
-signature.textContent = 'Developed by Anastácio Gomes.'
-let clearbutton = document.getElementById('clear')
-clearbutton.addEventListener('click', () => {
-    let alldivs = document.querySelectorAll('.square')
-    cleardraw(alldivs) 
-})
+ });
 
 let blackmode = document.getElementById('black')
 blackmode.addEventListener('click', () => {
-    let sizeinput = prompt('BLACK MODE! What grid-size do you want?! ');
-    let newsqsize = squareSize(sizeinput);
-    const gridcontainer = document.getElementById('grid');
-    gridcontainer.style.gridTemplateColumns = `repeat(${sizeinput}, ${newsqsize}px)`;
-    gridcontainer.style.gridTemplateRows = `repeat(${sizeinput}, ${newsqsize}px)`;
-    for (i=1; i<=sizeinput**2; i++){
-        let divs = document.createElement('div');
-        divs.classList.add('square');
-        container.appendChild(divs);
-    };
+    clearDraw()
+    changeGrid()
+    currentMode('Black mode selected!')
     const blackdiv = document.querySelectorAll('.square');
-    cleardraw(blackdiv)
-    blackdiv.forEach(div => div.addEventListener('mouseover', () => {div.classList.add('black')}));
-})
+    blackdiv.forEach(div => div.addEventListener('mouseover', () => {div.style.background = 'black'}));
+});
 
-function cleardraw(){
+function clearDraw(){
     const alldivs = document.querySelectorAll('.square')
     alldivs.forEach(div => div.removeAttribute('style'))
-    
-}
+};
+
+let clearbutton = document.getElementById('clear')
+clearbutton.addEventListener('click', () => {
+    clearDraw()
+    currentMode('Drawing Cleared!')
+});
 
 function changeGrid(){
-    cleardraw()
-    const value = document.getElementById('sqsize').value
+    clearDraw()
+    currentMode('No mode selected!')
+    const sqsizeinput = document.getElementById('sqsize').value
+    if(sqsizeinput>=100) return alert('Only values lower than 100!!!');
+    console.log(sqsizeinput)
+    const newsqsize = squareSize(sqsizeinput);
+    const gridcontainer = document.getElementById('grid');
+    gridcontainer.style.gridTemplateColumns = `repeat(${sqsizeinput}, ${newsqsize}px)`;
+    gridcontainer.style.gridTemplateRows = `repeat(${sqsizeinput}, ${newsqsize}px)`;
     const alldivs = document.getElementById('grid')
     while(alldivs.firstChild){alldivs.removeChild(alldivs.firstChild)}
     const grid = document.querySelector('#grid')
-    for (i=1; i<=value**2; i++){
+    for (i=1; i<=sqsizeinput**2; i++){
         let div = document.createElement('div')
         div.classList.add('square')
         grid.appendChild(div)
     }
-    return value
-}
+};
 
-let buttonchangegrid = document.getElementById('submit')
-buttonchangegrid.addEventListener('click', changeGrid)
+
+
+let buttonchangegrid = document.getElementById('submit');
+buttonchangegrid.addEventListener('click', changeGrid);
+
+
+let title = document.getElementById('title');
+title.textContent = 'Etch-A-Sketch';
+let signature = document.getElementById('signature');
+signature.textContent = 'Developed by Anastácio Gomes.';
