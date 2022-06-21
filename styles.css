@@ -4,7 +4,11 @@ body{
     background-color: rgb(209, 209, 209);
     height: 100vh;
     font-family: 'Lobster Two', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 #grid{
     display: grid;
     grid-template-columns: repeat(16, 31.25px);
@@ -19,6 +23,14 @@ body{
     display: flex;
     justify-content: space-evenly;
     gap: 30px;
+    flex-wrap: wrap-reverse;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
 }
 .square{
     background-color: white;
@@ -41,14 +53,15 @@ button {
 #black{
     box-shadow: 7px -5px 10px 0px black;
 }
-#header{
-    margin: 20px;
-}
+
 #title{
     font-size: 100px;
+    margin: 20px;
 }
 #signature{
     font-size: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 #buttons{

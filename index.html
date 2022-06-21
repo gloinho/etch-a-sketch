@@ -12,26 +12,30 @@
     <script src="./scripts.js" defer></script>
 </head>
 <body id="body">
-    <div id="header">    
-        <div id="title"></div>
-        <div id="signature"></div>
-    </div>
-    <div id="grid-container">
-        <div id="stuff">
-            <div id="inputsize">
-                <label for="sqsize">Grid Size</label>
-                <input type="number" id="sqsize" name="sqsize" value="16">
-                <button id="submit">Change Grid</button>
+    <div id="content">
+        <div id="header">    
+            <div id="title"></div>
+        </div>
+        <div id="grid-container">
+            <div id="stuff">
+                <div id="inputsize">
+                    <label for="sqsize">Grid Size</label>
+                    <input type="number" id="sqsize" name="sqsize" value="16">
+                    <button id="submit">Change Grid</button>
+                </div>
+                <div id="buttons">
+                    <button id="rainbow">Rainbow Mode!</button>
+                    <button id="black">Black Mode!</button>
+                    <button id="clear">Clear Drawing</button>
+                </div>
             </div>
-            <div id="buttons">
-                <button id="rainbow">Rainbow Mode!</button>
-                <button id="black">Black Mode!</button>
-                <button id="clear">Clear Drawing</button>
+            <div id="container">        
+                <div id="grid">
+                </div>
+                <div id="currentmode"></div>
             </div>
         </div>
-        <div id="grid">
-        </div>
-        <div id="currentmode"></div>
     </div>
+    <div id="signature"></div>
 </body>
 </html>

@@ -1,6 +1,7 @@
 // Calculating square size without changing the amount of pixels of de div (grid-container (500x500))
 function squareSize(size){
-    let sqsize = 450/size;
+    let sqsize = Math.round(450/size);
+    console.log(sqsize)
     return sqsize;
 };
 
