@@ -73,12 +73,17 @@ button {
     font-family: 'Lobster Two', cursive;
     font-size: 20px;
     width: 140px;
+    transition: all .1s;
 }
+.clicked {
+    transform: scale(1.05);
+  }
+
 #rainbow{
-    box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 0px 0px 19px 0px rgba(0,0,0,0);
+    box-shadow: 5px 5px 15px 5px #FF8080, -9px 5px 15px 5px #FFE488, -7px -5px 15px 5px #8CFF85, 12px -5px 15px 5px #80C7FF, 12px 10px 15px 7px #E488FF, -10px 10px 15px 7px #FF616B, -10px -7px 27px 1px #8E5CFF, 5px 5px 15px 5px rgba(0,0,0,0);
 }
 #black{
-    box-shadow: 7px -5px 10px 0px black;
+    box-shadow: 5px 5px 15px 5px black, -9px 5px 15px 5px black
 }
 
 a{

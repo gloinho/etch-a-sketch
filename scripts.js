@@ -1,4 +1,3 @@
-// Calculating square size without changing the amount of pixels of de div (grid-container (500x500))
 function squareSize(size){
     let sqsize = Math.round(450/size);
     console.log(sqsize)
@@ -103,3 +102,12 @@ function changeGrid(){
 
 let buttonchangegrid = document.getElementById('submit');
 buttonchangegrid.addEventListener('click', changeGrid);
+
+function removeTransition(e){
+    if (e.propertyName !== 'transform') return;
+    this.classList.remove('clicked')
+  };
+
+const buttons = document.querySelectorAll('button')
+buttons.forEach(button => button.addEventListener('transitionend', removeTransition))
+buttons.forEach(button => button.addEventListener('click', ()=> {button.classList.add('clicked')}))
