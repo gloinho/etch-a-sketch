@@ -9,6 +9,7 @@ body{
     justify-content: space-between;
 }
 
+
 #grid{
     display: grid;
     grid-template-columns: repeat(16, 31.25px);
@@ -22,7 +23,7 @@ body{
 #grid-container{
     display: flex;
     justify-content: space-evenly;
-    gap: 30px;
+    gap: 100px;
     flex-wrap: wrap-reverse;
 }
 
@@ -47,18 +48,19 @@ button {
     font-size: 20px;
 }
 #rainbow{
-    -webkit-box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 0px 0px 19px 0px rgba(0,0,0,0); 
     box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 0px 0px 19px 0px rgba(0,0,0,0);
 }
 #black{
     box-shadow: 7px -5px 10px 0px black;
 }
-
+#header{
+    display: flex;
+    justify-content: center;
+}
 #title{
     font-size: 100px;
-    margin: 20px;
 }
-#signature{
+#footer{
     font-size: 30px;
     display: flex;
     justify-content: center;
