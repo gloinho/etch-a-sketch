@@ -3,12 +3,49 @@ body{
     padding: 0;
     background-color: rgb(209, 209, 209);
     height: 100vh;
-    font-family: 'Lobster Two', cursive;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
+#page{
+    font-family: 'Lobster Two', cursive;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header header"
+                        "stuff container"
+                        "footer footer";
+    height: 100vh;
+    margin: 0 300px 0 300px;
+    justify-items: center;
+}
+
+#header{
+    grid-area: header;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 100px;
+    align-self: center;
+}
+
+#stuff{
+    grid-area: stuff;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+
+#container{
+    grid-area: container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+}
+
+#footer{
+    grid-area: footer;
+    font-size: 30px;
+    align-self: end;
+}
 
 #grid{
     display: grid;
@@ -18,21 +55,10 @@ body{
     width: 450px;
     padding: 0;
     justify-content: center;  
-    border: 2px solid black;
-}
-#grid-container{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 100px;
-    flex-wrap: wrap-reverse;
+    
+    box-shadow: 5px 5px 5px black;
 }
 
-#container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:5px;
-}
 .square{
     background-color: white;
 }
@@ -54,37 +80,17 @@ button {
 #black{
     box-shadow: 7px -5px 10px 0px black;
 }
-#header{
-    display: flex;
-    justify-content: center;
-}
-#title{
-    font-size: 100px;
-    color: white;
-    text-shadow: 1px 0 0 black;
-}
-#footer{
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-}
+
 a{
     text-decoration: none;
-    
 }
+
 #buttons{
     display: flex;
     height: max-content;
     flex-direction: column;
-    gap:40px;
-    
-}
-
-#stuff{
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap:40px;
+    gap:40px;  
 }
 
 #inputsize{

@@ -101,12 +101,5 @@ function changeGrid(){
 };
 
 
-
 let buttonchangegrid = document.getElementById('submit');
 buttonchangegrid.addEventListener('click', changeGrid);
-
-
-let title = document.getElementById('title');
-title.textContent = 'Etch-A-Sketch';
-let signature = document.getElementById('signature');
-signature.textContent = 'Developed by Anastácio Gomes';
