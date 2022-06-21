@@ -46,6 +46,7 @@ button {
     cursor: pointer;
     font-family: 'Lobster Two', cursive;
     font-size: 20px;
+    width: 140px;
 }
 #rainbow{
     box-shadow: 7px -5px 10px 0px #4B0082, 11px -9px 10px 0px #0000FF, 16px -14px 10px 0px #00FF00, 20px -17px 10px 0px #FFFF00, 24px -19px 10px 0px #FF7F00, 27px -23px 10px 0px #FF0000, 0px 0px 19px 0px rgba(0,0,0,0);
@@ -59,24 +60,31 @@ button {
 }
 #title{
     font-size: 100px;
+    color: white;
+    text-shadow: 1px 0 0 black;
 }
 #footer{
     font-size: 30px;
     display: flex;
     justify-content: center;
 }
-
+a{
+    text-decoration: none;
+    
+}
 #buttons{
     display: flex;
     height: max-content;
     flex-direction: column;
+    gap:40px;
+    
 }
 
 #stuff{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    gap:40px;
 }
 
 #inputsize{

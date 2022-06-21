@@ -108,5 +108,5 @@ buttonchangegrid.addEventListener('click', changeGrid);
 
 let title = document.getElementById('title');
 title.textContent = 'Etch-A-Sketch';
-let footer = document.getElementById('footer');
-footer.textContent = 'Developed by Anastácio Gomes.';
+let signature = document.getElementById('signature');
+signature.textContent = 'Developed by Anastácio Gomes';
